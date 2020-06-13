@@ -1,0 +1,35 @@
+[user]
+	name = Jef LeCompte
+	email = jeffreylec@gmail.com
+	signingkey = 9FFEF859EB0452E5
+[core]
+	editor = vim
+	excludesfile = $HOME/.gitignore_global
+	pager = diff-so-fancy | less -FR --tabs=4
+	askpass = /usr/bin/ksshaskpass
+[commit]
+	gpgsign = true
+[color]
+    ui = true
+    branch = auto
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[color "diff"]
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    branch = magenta normal bold
+    remoteBranch = magenta normal bold
+    changed = yellow normal bold
+    untracked = red normal bold
+    updated = green normal bold
+[color "branch"]
+    current = magenta normal ul bold
+    remote = yellow normal bold
+[pull]
+	rebase = false

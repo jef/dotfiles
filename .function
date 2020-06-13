@@ -1,0 +1,11 @@
+# Antibody
+function updatezsh() {
+    antibody bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
+}
+
+# GitHub
+function gfap() {
+    git fetch --all --prune --tags --force
+    git branch --verbose | grep "\[gone\]" | awk '{print $1}' | xargs git branch --delete --force
+    git pull
+}

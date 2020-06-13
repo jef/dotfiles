@@ -1,0 +1,17 @@
+# Arch Linux
+alias sysupdate="yay -Syu --devel --timeupdate"
+alias yays="yay -S"
+alias yayr="yay -Rns"
+
+# Editors
+alias vi="vim"
+
+# Directory
+alias cat=bat
+alias ls="exa"
+alias ll="exa -ghl --icons"
+alias la="exa -aghl --icons"
+
+# System
+alias adestart="WINEPREFIX=/home/jef/.adewine2/ /home/jef/.adewine2//drive_c/Program\ Files/Adobe/Adobe\ Digital\ Editions\ 2.0/DigitalEditions.exe > /dev/null 2>&1 &"
+alias open="dolphin"
