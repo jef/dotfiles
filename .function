@@ -9,3 +9,8 @@ function gfap() {
     git branch --verbose | grep "\[gone\]" | awk '{print $1}' | xargs git branch --delete --force
     git pull
 }
+
+function syncfork() {
+    gfap
+    git merge upstream/master
+}
