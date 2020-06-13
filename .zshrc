@@ -1,7 +1,7 @@
-source "$HOME/.runcom"
 source "$HOME/.alias"
 source "$HOME/.environment"
 source "$HOME/.function"
+source "$HOME/.runcom"
 source "$HOME/.specific"
 
 # Dotfiles

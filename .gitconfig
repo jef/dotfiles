@@ -4,7 +4,7 @@
 	signingkey = 9FFEF859EB0452E5
 [core]
 	editor = vim
-	excludesfile = "~/.gitignore_global"
+	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less -FR --tabs=4
 	askpass = /usr/bin/ksshaskpass
 [commit]
