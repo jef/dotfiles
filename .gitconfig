@@ -2,6 +2,8 @@
 	name = Jef LeCompte
 	email = jeffreylec@gmail.com
 	signingkey = 9FFEF859EB0452E5
+[includeIf "gitdir:~/greenlight/**"]
+    path = ~/greenlight/.gitconfig
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global

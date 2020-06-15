@@ -4,5 +4,6 @@ zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
 ael-code/zsh-colored-man-pages
-marlonrichert/zsh-autocomplete
+sorin-ionescu/prezto path:modules/completion
+sorin-ionescu/prezto path:modules/directory
 djui/alias-tips
