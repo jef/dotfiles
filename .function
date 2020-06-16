@@ -1,16 +1,54 @@
 # Antibody
 function updatezsh() {
-    antibody bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
+    antibody bundle < "$HOME/.zsh_plugins.txt" >! "$HOME/.zsh_plugins.sh"
 }
 
 # GitHub
-function gfap() {
+function _git_fetch_pull_prune() {
     git fetch --all --prune --tags --force
     git branch --verbose | grep "\[gone\]" | awk '{print $1}' | xargs git branch --delete --force
     git pull
 }
 
-function syncfork() {
-    gfap
+function _git_push_current_branch_set_upstream() {
+    git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"
+}
+
+function _git_sync_fork() {
+    _git_fetch_pull_prune
     git merge upstream/master
+}
+
+function trigger() {
+    branch_name="jef/trigger"
+    commit_message="chore: trigger deployment (${1})"
+    pr_assignee="jef"
+    pr_body="### Description
+    Triggers deployment based on (${1})"
+    pr_label="ci"
+    pr_title="chore: trigger deployment"
+
+    echo "checking out master and pruning local"
+
+    git checkout master > /dev/null 2>&1
+    gfap > /dev/null 2>&1
+
+    echo "deleting remote $branch_name if visible"
+
+    git branch --delete --force "$branch_name" > /dev/null 2>&1
+    git push origin --delete "$branch_name" > /dev/null 2>&1
+    git checkout -b "$branch_name" > /dev/null 2>&1
+
+    echo "creating commit and pr"
+    
+    git commit --allow-empty \
+        --message "$commit_message" \
+        --no-verify > /dev/null 2>&1
+    git push --set-upstream origin "$(git-branch-current 2> /dev/null)" --no-verify > /dev/null 2>&1
+    gh pr create \
+        --assignee "$pr_assignee" \
+        --title "$pr_title" \
+        --body "$pr_body" \
+        --label "$pr_label" > /dev/null 2>&1
+    gh pr view
 }

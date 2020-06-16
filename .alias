@@ -19,12 +19,13 @@ alias gco="git checkout"
 alias gcm="git commit --message"
 alias gf="git fetch"
 alias gfa="git fetch --all"
+alias gfap=_git_fetch_pull_prune
 alias gfm="git pull"
 alias gp="git push"
 alias gpa="git push --all"
 alias gpt="git push --tags"
 alias gpf="git push --force-with-lease"
-alias gpc="git push --set-upstream origin $(git-branch-current 2> /dev/null)"
+alias gpc=_git_push_current_branch_set_upstream
 alias gba="git branch --all --verbose"
 alias gbc="git checkout -b"
 alias gbd="git branch --delete"
@@ -52,6 +53,7 @@ alias gid="git diff --no-ext-diff --cached"
 alias giD="git diff --no-ext-diff --cached --word-diff"
 alias gix="git rm -r --cached"
 alias giX="git rm -rf --cached"
+alias gsf=_git_sync_fork
 
 # System
 alias _="sudo"

@@ -1,16 +1,18 @@
 [user]
-	name = Jef LeCompte
-	email = jeffreylec@gmail.com
-	signingkey = 9FFEF859EB0452E5
+    name = Jef LeCompte
+    email = jeffreylec@gmail.com
+    signingkey = 9FFEF859EB0452E5
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less -FR --tabs=4
-	askpass = /usr/bin/ksshaskpass
+    editor = vim
+    excludesfile = ~/.gitignore_global
+    pager = diff-so-fancy | less -FR --tabs=4
+    askpass = /usr/bin/ksshaskpass
+[includeIf "gitdir:~/greenlight/**"]
+    path = ~/greenlight/.gitconfig
 [commit]
-	gpgsign = true
+    gpgsign = true
 [color]
     ui = true
     branch = auto

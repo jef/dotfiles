@@ -1,9 +1,9 @@
 romkatv/powerlevel10k
-zsh-users/zsh-syntax-highlighting
+
 zsh-users/zsh-completions
+
+zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 zsh-users/zsh-autosuggestions
-ael-code/zsh-colored-man-pages
-sorin-ionescu/prezto path:modules/completion
-sorin-ionescu/prezto path:modules/directory
 djui/alias-tips
+ael-code/zsh-colored-man-pages
