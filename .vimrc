@@ -12,10 +12,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 syntax on
 
+let g:forest_night_disable_italic_comment = 1
 set termguicolors
 colorscheme forest-night
 
@@ -50,3 +52,4 @@ set foldenable
 set backspace=indent,eol,start
 set listchars=eol:↵,tab:>·,trail:~,extends:>,precedes:<,space:·
 set list
+set mouse=a
