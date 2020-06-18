@@ -17,8 +17,8 @@ call plug#end()
 
 syntax on
 
-let g:forest_night_disable_italic_comment = 1
 set termguicolors
+let g:forest_night_disable_italic_comment = 1
 colorscheme forest-night
 
 set laststatus=2

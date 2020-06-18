@@ -57,3 +57,5 @@ alias gsf=_git_sync_fork
 
 # System
 alias _="sudo"
+alias rm="rm -i"
+
