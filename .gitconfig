@@ -34,5 +34,4 @@
     rebase = false
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
-[includeIf "gitdir:~/development/**"]
-    path = ~/development/.gitconfig
+
