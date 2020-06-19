@@ -30,25 +30,23 @@ function trigger() {
 
     echo "checking out master and pruning local"
 
-    git checkout master > /dev/null 2>&1
-    gfap > /dev/null 2>&1
+    git checkout master
+    _git_fetch_pull_prune
 
-    echo "deleting remote $branch_name if visible"
-
-    git branch --delete --force "$branch_name" > /dev/null 2>&1
-    git push origin --delete "$branch_name" > /dev/null 2>&1
-    git checkout -b "$branch_name" > /dev/null 2>&1
+    git branch --delete --force "$branch_name"
+    git push origin --delete "$branch_name"
+    git checkout -b "$branch_name"
 
     echo "creating commit and pr"
     
     git commit --allow-empty \
         --message "$commit_message" \
-        --no-verify > /dev/null 2>&1
-    git push --set-upstream origin "$(git-branch-current 2> /dev/null)" --no-verify > /dev/null 2>&1
+        --no-verify
+    git push --set-upstream origin "$(git-branch-current 2> /dev/null)" --no-verify
     gh pr create \
         --assignee "$pr_assignee" \
         --title "$pr_title" \
         --body "$pr_body" \
-        --label "$pr_label" > /dev/null 2>&1
+        --label "$pr_label"
     gh pr view
 }
