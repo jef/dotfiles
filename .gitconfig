@@ -32,6 +32,13 @@
     remote = yellow normal bold
 [pull]
     rebase = false
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+[alias]
+    unstage = restore --staged
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
 

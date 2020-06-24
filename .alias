@@ -26,6 +26,7 @@ alias gpa="git push --all"
 alias gpt="git push --tags"
 alias gpf="git push --force-with-lease"
 alias gpc=_git_push_current_branch_set_upstream
+alias gb="git branch"
 alias gba="git branch --all --verbose"
 alias gbc="git checkout -b"
 alias gbd="git branch --delete"
