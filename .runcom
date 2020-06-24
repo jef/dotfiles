@@ -40,6 +40,11 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt SHARE_HISTORY
+
 [[ ! -f ~/.zsh-themes/forest-night ]] || source ~/.zsh-themes/forest-night
 
 # Antibody
