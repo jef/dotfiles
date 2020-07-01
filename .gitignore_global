@@ -1,6 +1,1 @@
-.idea
-node_modules
-Pipfile
-Pipfile.lock
 stale_outputs_checked
-.vscode

@@ -14,9 +14,9 @@ alias vi="vim"
 # Git
 pretty_format="%C(cyan)%an <%ae>%C(reset) %C(blue)%ai (%ar)%C(reset)%n%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"
 alias g="git"
-alias gc="git commit"
 alias gco="git checkout"
-alias gcm="git commit --message"
+alias gc="git commit --signoff"
+alias gcm="git commit --signoff --message"
 alias gf="git fetch"
 alias gfa="git fetch --all"
 alias gfap=_git_fetch_pull_prune
@@ -59,4 +59,3 @@ alias gsf=_git_sync_fork
 # System
 alias _="sudo"
 alias rm="rm -i"
-

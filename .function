@@ -1,5 +1,5 @@
 # Antibody
-function updatezsh() {
+function _updatezsh() {
     antibody bundle < "$HOME/.zsh_plugins.txt" >! "$HOME/.zsh_plugins.sh"
 }
 
@@ -19,7 +19,7 @@ function _git_sync_fork() {
     git merge upstream/master
 }
 
-function trigger() {
+function _trigger() {
     branch_name="jef/trigger"
     commit_message="chore: trigger deployment (${1})"
     pr_assignee="jef"
@@ -38,7 +38,7 @@ function trigger() {
     git checkout -b "$branch_name"
 
     echo "creating commit and pr"
-    
+
     git commit --allow-empty \
         --message "$commit_message" \
         --no-verify
@@ -49,4 +49,9 @@ function trigger() {
         --body "$pr_body" \
         --label "$pr_label"
     gh pr view
+}
+
+# System
+function _print_unicode() {
+    echo "↘ ↗ ✖ ✔"
 }
