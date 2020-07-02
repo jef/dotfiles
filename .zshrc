@@ -1,3 +1,6 @@
+autoload -Uz compinit && compinit
+
+source "$HOME/.zsh_plugins.sh"
 source "$HOME/.alias"
 source "$HOME/.environment"
 source "$HOME/.function"

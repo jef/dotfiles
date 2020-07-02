@@ -5,9 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-autoload -Uz select-word-style
-select-word-style bash
+[[ ! -f ~/.zsh-themes/forest-night ]] || source ~/.zsh-themes/forest-night
+
 bindkey '^[[Z' reverse-menu-complete
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' \
   'm:{a-z\-}={A-Z\_}' \
@@ -23,8 +25,6 @@ setopt AUTO_PARAM_SLASH    # If completed parameter is a directory, add a traili
 setopt EXTENDED_GLOB       # Needed for file modification glob modifiers with compinit
 unsetopt MENU_COMPLETE     # Do not autoselect the first completion entry.
 unsetopt FLOW_CONTROL      # Disable start/stop characters in shell editor.
-
-autoload -Uz compinit && compinit
 
 setopt AUTO_CD              # Auto changes to a directory without typing cd.
 setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
@@ -44,8 +44,3 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 setopt SHARE_HISTORY
-
-[[ ! -f ~/.zsh-themes/forest-night ]] || source ~/.zsh-themes/forest-night
-
-# Antibody
-source ~/.zsh_plugins.sh
