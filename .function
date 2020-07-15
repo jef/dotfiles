@@ -11,7 +11,7 @@ function _git_fetch_pull_prune() {
 }
 
 function _git_push_set_upstream_current_branch() {
-    git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"
+    git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)" $@
 }
 
 function _git_sync_fork() {

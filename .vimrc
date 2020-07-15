@@ -53,3 +53,11 @@ set backspace=indent,eol,start
 set listchars=eol:↵,tab:>·,trail:~,extends:>,precedes:<,space:·
 set list
 set mouse=a
+
+" use system clipboard
+noremap y "*y
+noremap yy "*yy
+noremap Y "*y$
+noremap x "*x
+noremap dd "*dd
+noremap D "*D
