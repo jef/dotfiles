@@ -1,6 +1,7 @@
 zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search
+bazelbuild/bazel path:scripts/zsh_completion kind:fpath
 zsh-users/zsh-completions
 djui/alias-tips
 ael-code/zsh-colored-man-pages

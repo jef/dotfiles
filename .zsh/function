@@ -1,6 +1,6 @@
 # Antibody
-function _updatezsh() {
-    antibody bundle < "$HOME/.zsh_plugins.txt" >! "$HOME/.zsh_plugins.sh"
+function updatezsh() {
+    antibody bundle < "$HOME/.zsh/plugins.txt" >! "$HOME/.zsh/plugins"
 }
 
 # GitHub
@@ -19,7 +19,7 @@ function _git_sync_fork() {
     git merge upstream/master
 }
 
-function _trigger() {
+function trigger() {
     branch_name="jef/trigger"
     commit_message="chore: trigger deployment (${1})"
     pr_assignee="jef"
@@ -49,10 +49,11 @@ Triggers deployment based on (${1})"
         --title "$pr_title" \
         --body "$pr_body" \
         --label "$pr_label" > /dev/null 2>&1
-    gh pr view > /dev/null 2>&1
+    gh pr view
+    gco master
 }
 
 # System
-function _print_unicode() {
-    echo "↘ ↗ ✖ ✔"
+function print_unicode() {
+    echo "↘ ↗ ✖ ✔ ℹ"
 }

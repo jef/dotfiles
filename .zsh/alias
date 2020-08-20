@@ -8,6 +8,10 @@ alias la="exa -aghl --icons"
 alias dk="docker"
 alias dkc="docker-compose"
 
+# Kubernetes
+alias kb="kubectl"
+alias kbc="kubectl config"
+
 # Editors
 alias vi="vim"
 
@@ -17,6 +21,8 @@ alias g="git"
 alias gco="git checkout"
 alias gc="git commit --signoff"
 alias gcm="git commit --signoff --message"
+alias gcx="git clean -fd"
+alias gcX="git clean -xfd"
 alias gf="git fetch"
 alias gfa="git fetch --all"
 alias gfap=_git_fetch_pull_prune
