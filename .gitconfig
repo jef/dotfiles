@@ -41,4 +41,5 @@
     unstage = restore --staged
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
-
+[credential]
+    helper = /usr/lib/git-core/git-credential-libsecret
