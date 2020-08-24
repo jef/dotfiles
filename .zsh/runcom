@@ -10,6 +10,7 @@ fi
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$HOME/.zsh/cache"
 zstyle ':completion:*' menu select

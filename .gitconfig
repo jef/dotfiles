@@ -39,7 +39,8 @@
     smudge = git-lfs smudge -- %f
 [alias]
     unstage = restore --staged
+[includeIf "gitdir:~/development/**"]
+    path = ~/developmentt/.gitconfig
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
-[credential]
-    helper = /usr/lib/git-core/git-credential-libsecret
+
