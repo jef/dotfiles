@@ -5,12 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-[[ ! -f ~/.zsh/themes/forest-night ]] || source "$HOME/.zsh/themes/forest-night"
+# prompt theme
+source "$HOME/.zsh/themes/forest-night"
 
+# keybinds
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# completions
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$HOME/.zsh/cache"
 zstyle ':completion:*' menu select
@@ -40,13 +43,14 @@ setopt EXTENDED_GLOB        # Use extended globbing syntax.
 unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
                             # Use >! and >>! to bypass.
 
+# directory jump
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
+# history
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 export HISTFILE="$HOME/.zsh/history"
-
 setopt SHARE_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY

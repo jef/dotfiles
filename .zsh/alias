@@ -1,21 +1,21 @@
-# Directory
+# directory 
 alias cat="bat"
 alias ls="exa"
 alias ll="exa -ghl --icons"
 alias la="exa -aghl --icons"
 
-# Docker
+# docker
 alias dk="docker"
 alias dkc="docker-compose"
 
-# Kubernetes
+# kubernetes
 alias kb="kubectl"
 alias kbc="kubectl config"
 
-# Editors
+# editors
 alias vi="vim"
 
-# Git
+# git
 pretty_format="%C(cyan)%an <%ae>%C(reset) %C(blue)%ai (%ar)%C(reset)%n%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"
 alias g="git"
 alias gco="git checkout"
@@ -62,6 +62,6 @@ alias gix="git rm -r --cached"
 alias giX="git rm -rf --cached"
 alias gsf=_git_sync_fork
 
-# System
+# system
 alias _="sudo"
 alias rm="rm -i"
