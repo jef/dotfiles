@@ -1,25 +1,25 @@
 # antibody 
-function updatezsh() {
+updatezsh() {
     antibody bundle < "$HOME/.zsh/plugins.txt" >! "$HOME/.zsh/plugins"
 }
 
 # github 
-function _git_fetch_pull_prune() {
+_git_fetch_pull_prune() {
     git fetch --all --prune --tags --force
     git branch --verbose | grep "\[gone\]" | awk '{print $1}' | xargs git branch --delete --force
     git pull
 }
 
-function _git_push_set_upstream_current_branch() {
-    git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)" $@
+_git_push_set_upstream_current_branch() {
+    git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)" "$@"
 }
 
-function _git_sync_fork() {
+_git_sync_fork() {
     _git_fetch_pull_prune
     git merge upstream/master
 }
 
-function trigger() {
+trigger() {
     branch_name="jef/trigger"
     commit_message="chore: trigger deployment (${1})"
     pr_assignee="jef"
@@ -56,6 +56,6 @@ Triggers deployment based on (${1})"
 }
 
 # system
-function print_unicode() {
+print_unicode() {
     echo "↘ ↗ ✖ ✔ ℹ"
 }

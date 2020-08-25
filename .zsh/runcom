@@ -9,18 +9,18 @@ fi
 source "$HOME/.zsh/themes/forest-night"
 
 # keybinds
-bindkey '^[[Z' reverse-menu-complete
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey "^[[Z" reverse-menu-complete
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 # completions
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$HOME/.zsh/cache"
-zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list '' \
-  'm:{a-z\-}={A-Z\_}' \
-  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
-  'r:|?=** m:{a-z\-}={A-Z\_}'
+zstyle ":completion:*" use-cache on
+zstyle ":completion:*" cache-path "$HOME/.zsh/cache"
+zstyle ":completion:*" menu select
+zstyle ":completion:*" matcher-list "" \
+  "m:{a-z\-}={A-Z\_}" \
+  "r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}" \
+  "r:|?=** m:{a-z\-}={A-Z\_}"
 
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 setopt ALWAYS_TO_END       # Move cursor to the end of a completed word.
@@ -44,7 +44,7 @@ unsetopt CLOBBER            # Do not overwrite existing files with > and >>.
                             # Use >! and >>! to bypass.
 
 # directory jump
-alias d='dirs -v'
+alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # history
