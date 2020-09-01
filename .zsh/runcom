@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # prompt theme
-source "$HOME/.zsh/themes/forest-night"
+#source "$HOME/.zsh/themes/forest-night"
+source "$HOME/.zsh/themes/p10k"
 
 # keybinds
 bindkey "^[[Z" reverse-menu-complete
@@ -48,9 +49,10 @@ alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # history
-export HISTSIZE=100000
-export HISTFILESIZE=100000
+export SAVEHIST=1000000000
+export HISTSIZE=1000000000
 export HISTFILE="$HOME/.zsh/history"
+export HISTTIMEFORMAT="[%F %T] "
+setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_FIND_NO_DUPS
-setopt INC_APPEND_HISTORY
