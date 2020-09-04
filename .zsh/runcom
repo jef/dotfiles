@@ -17,11 +17,12 @@ bindkey "^[[B" history-substring-search-down
 # completions
 zstyle ":completion:*" use-cache on
 zstyle ":completion:*" cache-path "$HOME/.zsh/cache"
-zstyle ":completion:*" menu select
-zstyle ":completion:*" matcher-list "" \
-  "m:{a-z\-}={A-Z\_}" \
-  "r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}" \
-  "r:|?=** m:{a-z\-}={A-Z\_}"
+# if not using fzf, use below
+#zstyle ":completion:*" menu select
+#zstyle ":completion:*" matcher-list "" \
+#  "m:{a-z\-}={A-Z\_}" \
+#  "r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}" \
+#  "r:|?=** m:{a-z\-}={A-Z\_}"
 
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 setopt ALWAYS_TO_END       # Move cursor to the end of a completed word.
