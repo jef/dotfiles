@@ -63,6 +63,9 @@ alias gwD="git diff --no-ext-diff --word-diff"
 alias gws="git status --ignore-submodules=none --short"
 alias gwS="git status --ignore-submodules=none"
 
+# kitty
+alias icat="kitty +kitten icat"
+
 # system
 alias _="sudo"
 alias rm="rm -i"
