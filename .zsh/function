@@ -1,5 +1,5 @@
 # antibody 
-updatezsh() {
+zshupdate() {
     antibody bundle < "$HOME/.zsh/plugins.txt" >! "$HOME/.zsh/plugins"
 }
 
