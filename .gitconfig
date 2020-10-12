@@ -11,16 +11,6 @@
 [color]
     ui = true
     branch = auto
-[color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
-[color "diff"]
-    commit = yellow bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
 [color "status"]
     branch = magenta normal bold
     remoteBranch = magenta normal bold
@@ -30,6 +20,16 @@
 [color "branch"]
     current = magenta normal ul bold
     remote = yellow normal bold
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [pull]
     rebase = false
 [filter "lfs"]

@@ -10,9 +10,8 @@ fi
 source "$HOME/.zsh/themes/p10k"
 
 # keybinds
-bindkey "^[[Z" reverse-menu-complete
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # completions
 zstyle ":completion:*" use-cache on

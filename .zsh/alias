@@ -34,7 +34,9 @@ alias gfap=_git_fetch_pull_prune
 alias gfm="git pull"
 alias gia="git add"
 alias gid="git diff --no-ext-diff --cached"
+alias gidt="git difftool --no-ext-diff --cached"
 alias giD="git diff --no-ext-diff --cached --word-diff"
+alias giDt="git difftool --no-ext-diff --cached --word-diff"
 alias gix="git rm -r --cached"
 alias giX="git rm -rf --cached"
 alias gl="git log --topo-order --pretty=format:\"$pretty_format\""
@@ -59,12 +61,15 @@ alias gsx="git stash drop"
 alias gsX="git stash clear"
 alias gus="git unstage"
 alias gwd="git diff --no-ext-diff"
+alias gwdt="git difftool --no-ext-diff"
 alias gwD="git diff --no-ext-diff --word-diff"
+alias gwDt="git difftool --no-ext-diff --word-diff"
 alias gws="git status --ignore-submodules=none --short"
 alias gwS="git status --ignore-submodules=none"
 
 # kitty
 alias icat="kitty +kitten icat"
+alias kssh="kitty +kitten ssh"
 
 # system
 alias _="sudo"
