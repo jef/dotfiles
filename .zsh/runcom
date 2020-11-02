@@ -6,12 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # prompt theme
-#source "$HOME/.zsh/themes/forest-night"
 source "$HOME/.zsh/themes/p10k"
-
-# keybinds
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # completions
 zstyle ":completion:*" use-cache on
