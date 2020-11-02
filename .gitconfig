@@ -5,7 +5,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
-    pager = diff-so-fancy | less -FR --tabs=4
+    pager = delta
 [commit]
     gpgsign = true
 [color]
@@ -20,16 +20,12 @@
 [color "branch"]
     current = magenta normal ul bold
     remote = yellow normal bold
-[diff]
-    tool = kitty
-    guitool = kitty.gui
-[difftool]
-    prompt = false
-    trustExitCode = true
-[difftool "kitty"]
-    cmd = kitty +kitten diff $LOCAL $REMOTE
-[difftool "kitty.gui"]
-    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = side-by-side line-numbers
+    syntax-theme = Forest Night (Italic)
+    whitespace-error-style = 22 reverse
 [pull]
     rebase = false
 [filter "lfs"]
