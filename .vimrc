@@ -10,7 +10,7 @@ Plug 'bufbuild/vim-buf'
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'sainnhe/forest-night'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -24,12 +24,11 @@ call plug#end()
 syntax on
 
 set termguicolors
-let g:forest_night_disable_italic_comment = 1
-colorscheme forest-night
+colorscheme dracula
 
 set laststatus=2
 let g:lightline = {
-\ 'colorscheme' : 'forest_night',
+\ 'colorscheme' : 'dracula',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
