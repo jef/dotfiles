@@ -24,7 +24,7 @@
     diffFilter = delta --color-only
 [delta]
     features = side-by-side line-numbers
-    syntax-theme = Forest Night (Italic)
+    syntax-theme = Nord
     whitespace-error-style = 22 reverse
 [pull]
     rebase = false

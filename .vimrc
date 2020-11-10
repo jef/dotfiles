@@ -11,6 +11,7 @@ Plug 'bufbuild/vim-buf'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -24,11 +25,11 @@ call plug#end()
 syntax on
 
 set termguicolors
-colorscheme dracula
+colorscheme nord
 
 set laststatus=2
 let g:lightline = {
-\ 'colorscheme' : 'dracula',
+\ 'colorscheme' : 'nord',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
