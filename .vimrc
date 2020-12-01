@@ -9,9 +9,7 @@ Plug 'dense-analysis/ale'
 Plug 'bufbuild/vim-buf'
 
 Plug 'sheerun/vim-polyglot'
-
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -22,14 +20,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-syntax on
-
+syntax enable
 set termguicolors
-colorscheme nord
+colorscheme base16-default-dark
 
 set laststatus=2
 let g:lightline = {
-\ 'colorscheme' : 'nord',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

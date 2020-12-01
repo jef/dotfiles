@@ -1,4 +1,4 @@
-# directory 
+# directory
 alias cat="bat"
 alias ls="exa"
 alias ll="exa -ghl --icons"
@@ -26,6 +26,7 @@ alias gbD="git branch --delete --force"
 alias gco="git checkout"
 alias gc="git commit --signoff"
 alias gcm="git commit --signoff --message"
+alias gcM="git commit --signoff --allow-empty --message"
 alias gcx="git clean -fd"
 alias gcX="git clean -xfd"
 alias gf="git fetch"

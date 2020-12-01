@@ -24,7 +24,7 @@
     diffFilter = delta --color-only
 [delta]
     features = side-by-side line-numbers
-    syntax-theme = Nord
+    syntax-theme = base16-256
     whitespace-error-style = 22 reverse
 [pull]
     rebase = false
