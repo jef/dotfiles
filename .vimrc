@@ -22,7 +22,7 @@ call plug#end()
 
 syntax enable
 set termguicolors
-colorscheme base16-default-dark
+colorscheme base16-eighties
 
 set laststatus=2
 let g:lightline = {

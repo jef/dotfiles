@@ -1,21 +1,24 @@
+# Base16 Eighties
+# Author: Chris Kempson (http://chriskempson.com)
+
 _gen_fzf_default_opts() {
 
-local color00='#181818'
-local color01='#282828'
-local color02='#383838'
-local color03='#585858'
-local color04='#b8b8b8'
-local color05='#d8d8d8'
-local color06='#e8e8e8'
-local color07='#f8f8f8'
-local color08='#ab4642'
-local color09='#dc9656'
-local color0A='#f7ca88'
-local color0B='#a1b56c'
-local color0C='#86c1b9'
-local color0D='#7cafc2'
-local color0E='#ba8baf'
-local color0F='#a16946'
+local color00='#2d2d2d'
+local color01='#393939'
+local color02='#515151'
+local color03='#747369'
+local color04='#a09f93'
+local color05='#d3d0c8'
+local color06='#e8e6df'
+local color07='#f2f0ec'
+local color08='#f2777a'
+local color09='#f99157'
+local color0A='#ffcc66'
+local color0B='#99cc99'
+local color0C='#66cccc'
+local color0D='#6699cc'
+local color0E='#cc99cc'
+local color0F='#d27b53'
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 " --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D"\
