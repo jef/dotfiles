@@ -1,7 +1,7 @@
 [user]
     name = Jef LeCompte
     email = jeffreylec@gmail.com
-    signingkey = 9FFEF859EB0452E5
+    signingkey = 7F5BA322B5DC170C
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
