@@ -1,8 +1,8 @@
 # directory
 alias cat="bat"
 alias ls="exa"
-alias ll="exa -ghl --icons"
-alias la="exa -aghl --icons"
+alias ll="exa -ghl"
+alias la="exa -aghl"
 
 # docker
 alias dk="docker"
