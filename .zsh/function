@@ -22,11 +22,13 @@ _git_sync_fork() {
 
 trigger() {
     branch_name="jef/trigger"
-    commit_message="chore: trigger deployment (${1})"
+    commit_message="chore: trigger deployment
+
+Ref: ${1}"
     pr_assignee="jef"
     pr_body="### Description
 
-Triggers deployment based on (${1})"
+Triggers deployment based on ${1}"
     pr_label=""
     pr_title="chore: trigger deployment"
 
@@ -44,7 +46,7 @@ Triggers deployment based on (${1})"
     git commit --allow-empty \
         --message "$commit_message" \
         --no-verify > /dev/null 2>&1
-    git push --set-upstream origin "$(git-branch-current 2> /dev/null)" --no-verify > /dev/null 2>&1
+    _git_push_set_upstream_current_branch --no-verify > /dev/null 2>&1
 
     gh pr create \
         --assignee "$pr_assignee" \

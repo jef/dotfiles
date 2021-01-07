@@ -22,18 +22,18 @@ call plug#end()
 
 syntax enable
 set termguicolors
-colorscheme base16-material
+colorscheme base16-github
 
 set laststatus=2
 let g:lightline = {
-\ 'active': {
-\   'left': [ [ 'mode', 'paste' ],
-\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-\ },
-\ 'component_function': {
-\   'gitbranch': 'FugitiveHead'
-\ },
-\ }
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 let g:ale_linters = {
 \ 'proto': ['buf-check-lint',],
