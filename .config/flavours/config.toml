@@ -12,4 +12,5 @@ rewrite = true
 [[item]]
 file = '~/.config/kitty/theme.conf'
 template = 'kitty'
+hook = 'kitty @ set-colors -a -c ~/.config/kitty/theme.conf'
 rewrite = true
