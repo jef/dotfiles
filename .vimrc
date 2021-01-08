@@ -7,33 +7,18 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'bufbuild/vim-buf'
-
 Plug 'sheerun/vim-polyglot'
-Plug 'chriskempson/base16-vim'
+
+Plug 'noahfrederick/vim-noctu'
 
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-syntax enable
-set termguicolors
-colorscheme base16-github
-
-set laststatus=2
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+colorscheme noctu
 
 let g:ale_linters = {
 \ 'proto': ['buf-check-lint',],
@@ -44,6 +29,7 @@ let g:ale_linters_explicit = 1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+set laststatus=2
 set expandtab
 set softtabstop=4
 set shiftwidth=4
