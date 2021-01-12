@@ -2,3 +2,6 @@
 .zsh/cache/
 .zsh/history
 .zsh/plugins
+.config/bat/themes/base16-dynamic.tmTheme
+.config/fzf/theme
+.config/kitty/theme.conf
