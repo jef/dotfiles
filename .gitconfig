@@ -25,7 +25,7 @@
 [interactive]
     diffFilter = delta --color-only
 [delta]
-    light = true
+    #light = true
     features = side-by-side line-numbers decorations
     syntax-theme = base16-dynamic
     whitespace-error-style = 22 reverse

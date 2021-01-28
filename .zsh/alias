@@ -1,8 +1,8 @@
 # directory
 alias cat="bat"
-alias ls="exa"
-alias ll="exa -ghl"
+alias l="exa -ghl"
 alias la="exa -aghl"
+alias ls="exa"
 
 # docker
 alias dk="docker"
@@ -84,3 +84,6 @@ alias kssh="kitty +kitten ssh"
 # system
 alias _="sudo"
 alias rm="rm -i"
+
+# vscode
+alias sudocode="sudo code --user-data-dir=$HOME/.vscode-root"

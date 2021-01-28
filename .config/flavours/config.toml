@@ -14,3 +14,8 @@ file = '~/.config/kitty/theme.conf'
 template = 'kitty'
 hook = 'kitty @ set-colors -a -c ~/.config/kitty/theme.conf'
 rewrite = true
+
+[[item]]
+file = '~/.config/hexchat/colors.conf'
+template = 'hexchat'
+rewrite = true
