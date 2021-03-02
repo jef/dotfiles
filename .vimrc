@@ -16,6 +16,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 colorscheme noctu

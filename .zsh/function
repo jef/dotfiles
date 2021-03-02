@@ -32,9 +32,9 @@ Triggers deployment based on ${1}"
     pr_label=""
     pr_title="chore: trigger deployment"
 
-    echo "checking out master and pruning local"
+    echo "checking out main and pruning local"
 
-    git checkout master > /dev/null 2>&1
+    git checkout main > /dev/null 2>&1
     _git_fetch_pull_prune > /dev/null 2>&1
 
     git branch --delete --force "$branch_name" > /dev/null 2>&1
@@ -55,7 +55,7 @@ Triggers deployment based on ${1}"
         --label "$pr_label" > /dev/null 2>&1
     gh pr view
 
-    git checkout master
+    git checkout main
 }
 
 # kubectl
