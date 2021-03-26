@@ -1,10 +1,4 @@
 [[item]]
-file = '~/.config/bat/themes/base16-dynamic.tmTheme'
-template = 'textmate'
-hook = 'bat cache --build'
-rewrite = true
-
-[[item]]
 file = '~/.config/fzf/theme'
 template = 'fzf'
 rewrite = true

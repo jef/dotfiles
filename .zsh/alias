@@ -82,7 +82,6 @@ alias icat="kitty +kitten icat"
 alias kssh="kitty +kitten ssh"
 
 # system
-alias _="sudo"
 alias rm="rm -i"
 
 # vscode

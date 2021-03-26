@@ -27,7 +27,7 @@
 [delta]
     #light = true
     features = side-by-side line-numbers decorations
-    syntax-theme = base16-dynamic
+    syntax-theme = base16
     whitespace-error-style = 22 reverse
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
