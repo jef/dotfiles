@@ -9,6 +9,9 @@ window:
     x: 10
     y: 10
   dynamic_title: true
+key_bindings:
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       }
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
 
 # Start flavours
 # Base16 Windows 95 256 - alacritty color config

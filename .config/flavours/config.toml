@@ -17,3 +17,8 @@ rewrite = true
 file = '~/.vim/colors/base16.vim'
 template = 'vim'
 rewrite = true
+
+[[item]]
+file = '~/.config/tmux/theme.conf'
+template = 'tmux'
+rewrite = true
