@@ -9,8 +9,6 @@ Plug 'dense-analysis/ale'
 Plug 'bufbuild/vim-buf'
 Plug 'sheerun/vim-polyglot'
 
-Plug 'noahfrederick/vim-noctu'
-
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -20,7 +18,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
-colorscheme noctu
+colorscheme base16
+
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 let g:ale_linters = {
 \ 'proto': ['buf-check-lint',],
