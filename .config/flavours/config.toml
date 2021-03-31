@@ -1,11 +1,12 @@
 [[item]]
-file = '~/.config/alacritty/alacritty.yml'
-template = 'alacritty'
-subtemplate = 'default-256'
-
-[[item]]
 file = '~/.config/fzf/theme'
 template = 'fzf'
+rewrite = true
+
+[[item]]
+file = '~/.config/kitty/theme.conf'
+template = 'kitty'
+subtemplate = 'default-256'
 rewrite = true
 
 [[item]]
@@ -16,9 +17,4 @@ rewrite = true
 [[item]]
 file = '~/.vim/colors/base16.vim'
 template = 'vim'
-rewrite = true
-
-[[item]]
-file = '~/.config/tmux/theme.conf'
-template = 'tmux'
 rewrite = true
