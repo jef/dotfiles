@@ -3,12 +3,11 @@ bitwarden-bin
 fnm-bin
 git-delta-bin
 google-chrome
-google-cloud-sdk
 gotop
 jetbrains-toolbox
 nvidia-container-runtime
 nvidia-container-toolkit
-plymouth
+paccache-hook
 postman-bin
 rofi-emoji
 slack-desktop

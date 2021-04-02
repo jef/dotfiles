@@ -11,4 +11,4 @@ Depends = curl
 Depends = openssl
 Depends = arch-audit
 When = PostTransaction
-Exec = /usr/bin/arch-audit
+Exec = /usr/bin/arch-audit -u -C always

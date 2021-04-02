@@ -6,7 +6,10 @@ bat
 binutils
 bison
 clang
+clementine
+cmake
 cronie
+dialog
 discord
 dmidecode
 docker
@@ -28,6 +31,9 @@ go
 gparted
 groff
 grub
+grub-customizer
+gst-plugins-base
+gst-plugins-good
 gtk-engines
 gvfs
 gvfs-mtp
@@ -50,6 +56,7 @@ m4
 make
 man-db
 man-pages
+meson
 mtools
 namcap
 neofetch
