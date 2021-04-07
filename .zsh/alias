@@ -22,7 +22,7 @@ alias kb="kubectl"
 alias kbc="kubectl config"
 
 # editors
-alias vi="vim"
+alias v="nvim"
 
 # git
 pretty_format="%C(cyan)%an <%ae>%C(reset) %C(blue)%ai (%ar)%C(reset)%n%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"

@@ -15,6 +15,6 @@ template = 'hexchat'
 rewrite = true
 
 [[item]]
-file = '~/.vim/colors/base16.vim'
+file = '~/.config/nvim/colors/base16.vim'
 template = 'vim'
 rewrite = true

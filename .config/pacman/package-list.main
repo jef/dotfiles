@@ -1,8 +1,10 @@
 arch-audit
+argocd-cli
 autoconf
 automake
 base
 bat
+bind
 binutils
 bison
 clang
@@ -37,6 +39,7 @@ gst-plugins-good
 gtk-engines
 gvfs
 gvfs-mtp
+helm
 hexchat
 hwinfo
 imagemagick
@@ -45,6 +48,8 @@ intel-ucode
 jdk11-openjdk
 keybase
 kitty
+kubectl
+kubeseal
 libpam-google-authenticator
 lightdm
 lightdm-gtk-greeter
@@ -60,6 +65,7 @@ meson
 mtools
 namcap
 neofetch
+neovim
 network-manager-applet
 networkmanager
 noto-fonts
