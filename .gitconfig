@@ -3,7 +3,7 @@
     email = jeffreylec@gmail.com
     signingkey = 7F5BA322B5DC170C
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitignore_global
     pager = delta
 [commit]

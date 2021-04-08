@@ -1,7 +1,7 @@
 # directory
 alias cat="bat"
-alias l="exa -ghl --git"
-alias la="exa -aghl --git"
+alias l="exa -ghlH --git"
+alias la="exa -aghlH --git"
 alias ls="exa --git"
 
 # docker
