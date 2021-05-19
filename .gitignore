@@ -1,5 +1,7 @@
-.dotfiles
+.dotfiles/
+.github/
 .zsh/cache/
+
 .zsh/history
 .config/bat/themes/base16-dynamic.tmTheme
 .config/fzf/theme
