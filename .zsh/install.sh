@@ -2,7 +2,7 @@
 
 _install_path="${HOME}/.dotfiles"
 _backup_path="${HOME}/.dotfiles-backup"
-git clone --bare https://raw.githubusercontent.com/jef/dotfiles/main/.zsh/install.sh "$_install_path"
+git clone --bare git@github.com:jef/dotfiles.git "$_install_path"
 config() {
    /usr/bin/git --git-dir="$_install_path" --work-tree="$HOME" "$@"
 }

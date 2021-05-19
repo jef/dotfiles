@@ -37,6 +37,7 @@ set backspace=indent,eol,start
 set listchars=eol:↵,tab:>·,trail:~,extends:>,precedes:<,space:·
 set list
 set mouse=a
+set clipboard=unnamedplus
 
 " Misc
 
