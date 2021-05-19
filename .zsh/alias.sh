@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # directory
 alias cat="bat"
 alias l="exa -ghlH --git"

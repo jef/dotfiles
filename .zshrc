@@ -1,15 +1,14 @@
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 
-source "$HOME/.zsh/plugins"
-autoload -Uz compinit && compinit -i
-source "$HOME/.zsh/alias"
-source "$HOME/.zsh/environment"
-source "$HOME/.zsh/function"
-source "$HOME/.zsh/runcom"
-source "$HOME/.zsh/specific"
+source "${HOME}/.zgenom/zgenom.zsh"
+source "${HOME}/.zsh/plugins.sh"
+source "${HOME}/.zsh/alias.sh"
+source "${HOME}/.zsh/environment.sh"
+source "${HOME}/.zsh/function.sh"
+source "${HOME}/.zsh/runcom.sh"
+source "${HOME}/.zsh/specific.sh"
 
 # Dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
-#zprof
-
+# zprof

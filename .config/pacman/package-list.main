@@ -1,5 +1,5 @@
 arch-audit
-argocd-cli
+argocd
 autoconf
 automake
 base
@@ -29,7 +29,6 @@ gcc
 git
 github-cli
 gnome-keyring
-go
 gparted
 groff
 grub
@@ -49,7 +48,9 @@ jdk11-openjdk
 keybase
 kitty
 kubectl
+kubectx
 kubeseal
+kustomize
 libpam-google-authenticator
 lightdm
 lightdm-gtk-greeter
@@ -75,6 +76,7 @@ noto-fonts-extra
 nvidia
 openssh
 optipng
+pacman-contrib
 patch
 pavucontrol
 pkgconf

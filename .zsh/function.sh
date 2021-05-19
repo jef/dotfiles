@@ -1,8 +1,4 @@
-# antibody 
-zshupdate() {
-    antibody update
-    antibody bundle < "$HOME/.zsh/plugins.txt" >! "$HOME/.zsh/plugins"
-}
+#!/bin/sh
 
 # github 
 _git_fetch_pull_prune() {
