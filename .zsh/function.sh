@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+
+# cloc
+cloc-git() {
+    _temp_dir=$(mktemp -d)/git-repo
+    git clone --depth 1 "$1" "$_temp_dir"
+    printf "Note: %s will be deleted automatically.\n\n" "$_temp_dir"
+    cloc "$_temp_dir"
+    rm -rf "$_temp_dir"
+}
 
 # github 
 _git_fetch_pull_prune() {

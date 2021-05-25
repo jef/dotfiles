@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if ! zgenom saved; then
   zgenom load Aloxaf/fzf-tab

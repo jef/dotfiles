@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 _install_path="${HOME}/.dotfiles"
 _backup_path="${HOME}/.dotfiles-backup"

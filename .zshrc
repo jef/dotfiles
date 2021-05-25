@@ -8,7 +8,4 @@ source "${HOME}/.zsh/function.sh"
 source "${HOME}/.zsh/runcom.sh"
 source "${HOME}/.zsh/specific.sh"
 
-# Dotfiles
-alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
-
 # zprof

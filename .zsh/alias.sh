@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # directory
 alias cat="bat"
@@ -11,7 +11,7 @@ alias dk="docker"
 alias dkc="docker-compose"
 
 # dotfiles
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 alias configia="config add"
 alias configcm="config commit --message"
 alias configfm="config pull"
@@ -51,9 +51,9 @@ alias giD="git diff --no-ext-diff --cached --word-diff"
 alias giDt="git difftool --no-ext-diff --cached --word-diff"
 alias gix="git rm -r --cached"
 alias giX="git rm -rf --cached"
-alias gl="git log --topo-order --pretty=format:\"$pretty_format\""
+alias gl="git log --topo-order --pretty=format:\"${pretty_format}\""
 alias glc="git shortlog --summary --numbered"
-alias gls="git log --topo-order --stat --pretty=format:\"$pretty_format\""
+alias gls="git log --topo-order --stat --pretty=format:\"${pretty_format}\""
 alias gm="git merge"
 alias gma="git merge --abort"
 alias gp="git push"
@@ -87,4 +87,4 @@ alias kssh="kitty +kitten ssh"
 alias rm="rm -i"
 
 # vscode
-alias sudocode="sudo code --user-data-dir=$HOME/.vscode-root"
+alias sudocode="sudo code --user-data-dir=${HOME}/.vscode-root"
