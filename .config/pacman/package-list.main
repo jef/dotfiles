@@ -8,7 +8,6 @@ bind
 binutils
 bison
 clang
-clementine
 cmake
 cronie
 dialog
@@ -28,6 +27,7 @@ garcon
 gcc
 git
 github-cli
+gnome-font-viewer
 gnome-keyring
 gparted
 groff
@@ -35,12 +35,14 @@ grub
 grub-customizer
 gst-plugins-base
 gst-plugins-good
+gtk-engine-murrine
 gtk-engines
 gvfs
 gvfs-mtp
 helm
 hexchat
 hwinfo
+hyperfine
 imagemagick
 inkscape
 intel-ucode
@@ -53,6 +55,7 @@ kustomize
 libpam-google-authenticator
 lightdm
 lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
 linux
 linux-firmware
 llvm
@@ -61,6 +64,7 @@ m4
 make
 man-db
 man-pages
+materia-gtk-theme
 meson
 mtools
 namcap
@@ -82,17 +86,19 @@ pkgconf
 postgresql
 pulseaudio
 python-pip
-python2
 reflector
 ripgrep
 rsync
 samba
 sassc
 seahorse
+slock
+sox
 subversion
 sudo
 texinfo
 thunar
+thunar-archive-plugin
 thunar-volman
 tmux
 tree
