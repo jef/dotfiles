@@ -86,5 +86,8 @@ alias kssh="kitty +kitten ssh"
 # system
 alias rm="rm -i"
 
+# todo
+alias t="todo.sh"
+
 # vscode
 alias sudocode="sudo code --user-data-dir=${HOME}/.vscode-root"
