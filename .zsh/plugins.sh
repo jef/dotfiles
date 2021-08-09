@@ -12,7 +12,6 @@ if ! zgenom saved; then
   zgenom load djui/alias-tips
   zgenom load ael-code/zsh-colored-man-pages
   zgenom load romkatv/powerlevel10k powerlevel10k
-  zgenom load romkatv/zsh-prompt-benchmark
   zgenom load "${HOME}/.zsh/plugins/asdf.plugin.zsh"
 
   zgenom save
