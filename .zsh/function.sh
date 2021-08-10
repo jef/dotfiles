@@ -78,12 +78,6 @@ Triggers deployment based on ${2}"
     git checkout "$branch"
 }
 
-# kubectl
-klog() {
-    [[ -n "$3" ]] && stern --namespace "$1" --tail=1 --output raw "$2" | jq --raw-output "\"\\u001b[30m[\\u001b[36m\\(.level)\\u001b[30m] \\u001b[35m\\($3) \\u001b[30m::\\u001b[0m \\(.message)\""
-    [[ -z "$3" ]] && stern --namespace "$1" --tail=1 --output raw "$2" | jq --raw-output "\"\\u001b[30m[\\u001b[36m\\(.level)\\u001b[30m] \\u001b[30m::\\u001b[0m \\(.message)\""
-}
-
 # system
 print_unicode() {
     echo "↘ ↗ ✖ ✔ ℹ"

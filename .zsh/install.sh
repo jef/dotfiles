@@ -23,8 +23,3 @@ config config status.showUntrackedFiles no
 echo "Installing zgenom."
 git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
 
-echo "Installing asdf."
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-if cd ~/.asdf; then
-    git checkout "$(git describe --abbrev=0 --tags)"
-fi

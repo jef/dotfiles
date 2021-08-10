@@ -46,6 +46,5 @@
     path = ~/developmentt/.gitconfig
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
-
 [init]
 	defaultBranch = main
