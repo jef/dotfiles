@@ -46,6 +46,7 @@ hyperfine
 imagemagick
 inkscape
 intel-ucode
+k9s
 keybase
 kitty
 kubectl
@@ -64,7 +65,6 @@ m4
 make
 man-db
 man-pages
-materia-gtk-theme
 meson
 mtools
 namcap
@@ -79,6 +79,7 @@ noto-fonts-extra
 nvidia
 openssh
 optipng
+otf-cascadia-code
 pacman-contrib
 patch
 pavucontrol
@@ -89,6 +90,7 @@ python-pip
 reflector
 ripgrep
 rsync
+ruby
 samba
 sassc
 seahorse
@@ -102,13 +104,13 @@ thunar-archive-plugin
 thunar-volman
 tmux
 tree
-ttf-fira-code
 ttf-roboto
 ttf-roboto-mono
 tumbler
 unzip
 vi
 vim
+weechat
 wget
 xarchiver
 xclip
@@ -133,7 +135,6 @@ xfdesktop
 xfwm4
 xfwm4-themes
 xorg-xinput
-xsel
 yubikey-manager-qt
 yubikey-personalization-gui
 zip
