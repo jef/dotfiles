@@ -9,7 +9,7 @@ fi
 
 # prompt theme
 source "$HOME/.zsh/themes/p10k.sh"
-source "$HOME/.config/fzf/theme"
+source "$HOME/.config/fzf/theme.sh"
 
 # completions
 zstyle ":completion:*" use-cache on

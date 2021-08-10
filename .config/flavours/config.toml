@@ -1,5 +1,5 @@
 [[item]]
-file = '~/.config/fzf/theme'
+file = '~/.config/fzf/theme.sh'
 template = 'fzf'
 rewrite = true
 

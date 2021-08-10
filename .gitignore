@@ -1,6 +1,7 @@
+# directories
 .dotfiles/
 .zsh/cache/
 
+# files
 .zsh/history
-.config/fzf/theme
 .config/kitty/theme.conf
