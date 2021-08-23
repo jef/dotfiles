@@ -35,6 +35,7 @@
     file-decoration-style = none
 [pull]
     rebase = false
+	twohead = ort
 [filter "lfs"]
     process = git-lfs filter-process
     required = true

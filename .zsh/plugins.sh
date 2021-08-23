@@ -1,7 +1,5 @@
 #!/bin/bash
 
-zgenom autoupdate --background
-
 if ! zgenom saved; then
   zgenom load Aloxaf/fzf-tab
   zgenom load zsh-users/zsh-syntax-highlighting
