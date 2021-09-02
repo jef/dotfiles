@@ -9,13 +9,11 @@ fi
 
 # prompt theme
 source "$HOME/.zsh/themes/p10k.sh"
-source "$HOME/.config/fzf/theme.sh"
 
 # completions
 zstyle ":completion:*" use-cache on
 zstyle ":completion:*" cache-path "$HOME/.zsh/cache"
-# if not using fzf, use below
-#zstyle ":completion:*" menu select
+# zstyle ":completion:*" menu select # without fzf
 zstyle ":completion:*" matcher-list "" \
   "m:{a-z\-}={A-Z\_}" \
   "r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}" \

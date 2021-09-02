@@ -6,23 +6,10 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 call plug#end()
-
-" Syntax and Theme
-
-colorscheme base16
-
-if exists('+termguicolors')
-  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-let g:airline_theme='base16_vim'
 
 " Good defaults
 set laststatus=2
@@ -40,7 +27,6 @@ set mouse=a
 set clipboard=unnamedplus
 
 " Misc
-
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |

@@ -5,37 +5,11 @@
 [core]
     editor = nvim
     excludesfile = ~/.gitignore_global
-    pager = delta
 [commit]
     gpgsign = true
-[color]
-    ui = true
-    branch = auto
-[color "status"]
-    branch = magenta normal bold
-    remoteBranch = magenta normal bold
-    changed = yellow normal bold
-    untracked = red normal bold
-    updated = green normal bold
-[color "branch"]
-    current = magenta normal ul bold
-    remote = yellow normal bold
-[diff]
-    colorMoved = default
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    light = true
-    features = side-by-side line-numbers decorations
-    syntax-theme = base16
-    whitespace-error-style = 22 reverse
-[delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
 [pull]
     rebase = false
-	twohead = ort
+    twohead = ort
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
@@ -48,4 +22,4 @@
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
 [init]
-	defaultBranch = main
+    defaultBranch = main

@@ -19,6 +19,9 @@ alias configp="config push"
 alias configws="config status --ignore-submodules=none --short"
 alias configwS="config status --ignore-submodules=none"
 
+# kitty
+alias themes="kitty +kitten themes"
+
 # kubernetes
 alias kb="kubectl"
 alias kbc="kubectl config"

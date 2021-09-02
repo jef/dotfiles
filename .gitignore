@@ -1,4 +1,5 @@
 # directories
+.config/nvim/plugged/
 .dotfiles/
 .zsh/cache/
 
