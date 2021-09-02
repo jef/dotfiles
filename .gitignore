@@ -1,8 +1,0 @@
-# directories
-.config/nvim/plugged/
-.dotfiles/
-.zsh/cache/
-
-# files
-.zsh/history
-.config/kitty/theme.conf
