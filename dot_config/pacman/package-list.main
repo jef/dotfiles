@@ -54,6 +54,7 @@ kubectl
 kubectx
 kubeseal
 kustomize
+lib32-gnutls
 libpam-google-authenticator
 lightdm
 lightdm-gtk-greeter
@@ -113,6 +114,9 @@ vi
 vim
 weechat
 wget
+wine
+wine-mono
+winetricks
 xarchiver
 xclip
 xfce4-appfinder
