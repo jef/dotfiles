@@ -5,3 +5,4 @@ source "${HOME}/.zsh/environment.sh"
 source "${HOME}/.zsh/function.sh"
 source "${HOME}/.zsh/runcom.sh"
 source "${HOME}/.zsh/specific.sh"
+
