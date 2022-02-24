@@ -10,15 +10,6 @@ alias ls="exa --git"
 alias dk="docker"
 alias dkc="docker-compose"
 
-# dotfiles
-alias config="git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
-alias configia="config add"
-alias configcm="config commit --message"
-alias configfm="config pull"
-alias configp="config push"
-alias configws="config status --ignore-submodules=none --short"
-alias configwS="config status --ignore-submodules=none"
-
 # kitty
 alias themes="kitty +kitten themes"
 
@@ -39,8 +30,8 @@ alias gbd="git branch --delete"
 alias gbD="git branch --delete --force"
 alias gco="git checkout"
 alias gc="git commit"
-alias gcm="git commit --message"
-alias gcM="git commit --allow-empty --message"
+alias gcm="git commit -m"
+alias gcM="git commit --allow-empty -m"
 alias gcx="git clean -fd"
 alias gcX="git clean -xfd"
 alias gf="git fetch"

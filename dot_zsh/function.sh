@@ -2,9 +2,11 @@
 
 # cloc
 cloc-git() {
+    _url="$(git remote get-url origin)"
+    if [ ! -z "$1" ] && _url="$1"
     _temp_dir=$(mktemp -d)/git-repo
-    git clone --depth 1 "$1" "$_temp_dir"
-    printf "Note: %s will be deleted automatically.\n\n" "$_temp_dir"
+    git clone --depth 1 "$_url" "$_temp_dir"
+    printf "note: %s will be deleted automatically.\n\n" "$_temp_dir"
     cloc "$_temp_dir"
     rm -rf "$_temp_dir"
 }

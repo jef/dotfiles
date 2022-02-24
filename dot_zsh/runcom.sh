@@ -10,19 +10,23 @@ fi
 # prompt theme
 source "$HOME/.zsh/themes/powerlevel10k.sh"
 
+# keybinds
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # completions
+zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 zstyle ":completion:*" use-cache on
 zstyle ":completion:*" cache-path "$HOME/.zsh/cache"
 zstyle ":completion:*" matcher-list "" \
   "m:{a-z\-}={A-Z\_}" \
   "r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}" \
   "r:|?=** m:{a-z\-}={A-Z\_}"
-zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:exa:*' fzf-preview 'exa -1 --color=always $realpath'
-zstyle ':fzf-tab:*' switch-group ',' '.'
+zstyle ":completion:*:git-checkout:*" sort false
+zstyle ":completion:*:descriptions" format "[%d]"
+zstyle ":fzf-tab:*" switch-group "," "."
+zstyle ":fzf-tab:complete:cd:*" fzf-preview "exa -1 --color=always $realpath"
+zstyle ":fzf-tab:complete:exa:*" fzf-preview "exa -1 --color=always $realpath"
 
 # directory jump
 alias d="dirs -v"
