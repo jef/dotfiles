@@ -15,8 +15,6 @@
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-[alias]
-    unstage = restore --staged
 [includeIf "gitdir:~/development/**"]
     path = ~/developmentt/.gitconfig
 [includeIf "gitdir:~/greenlight/**"]
