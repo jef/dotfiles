@@ -1,14 +1,7 @@
 #!/bin/bash
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # prompt theme
-source "$HOME/.zsh/themes/powerlevel10k.sh"
+source "$HOME/.zsh/themes/prompt.sh"
 
 # completions
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
@@ -20,9 +13,6 @@ zstyle ":completion:*" matcher-list "" \
   "r:|?=** m:{a-z\-}={A-Z\_}"
 zstyle ":completion:*:git-checkout:*" sort false
 zstyle ":completion:*:descriptions" format "[%d]"
-zstyle ":fzf-tab:*" switch-group "," "."
-zstyle ":fzf-tab:complete:cd:*" fzf-preview "exa -1 --color=always $realpath"
-zstyle ":fzf-tab:complete:exa:*" fzf-preview "exa -1 --color=always $realpath"
 
 # directory jump
 alias d="dirs -v"
