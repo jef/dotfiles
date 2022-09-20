@@ -45,9 +45,9 @@ alias giD="git diff --no-ext-diff --cached --word-diff"
 alias giDt="git difftool --no-ext-diff --cached --word-diff"
 alias gix="git rm -r --cached"
 alias giX="git rm -rf --cached"
-alias gl="git log --topo-order --pretty=format:\"${pretty_format}\""
+alias gl='git log --topo-order --pretty=format:"${pretty_format}"'
 alias glc="git shortlog --summary --numbered"
-alias gls="git log --topo-order --stat --pretty=format:\"${pretty_format}\""
+alias gls='git log --topo-order --stat --pretty=format:"${pretty_format}"'
 alias gm="git merge"
 alias gma="git merge --abort"
 alias gp="git push"
@@ -88,4 +88,4 @@ alias rm="rm -i"
 alias t="todo.sh"
 
 # vscode
-alias sudocode="sudo code --user-data-dir=${HOME}/.vscode-root"
+alias sudocode='sudo code --user-data-dir=${HOME}/.vscode-root'
