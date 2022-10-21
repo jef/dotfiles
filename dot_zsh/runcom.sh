@@ -10,6 +10,10 @@ fi
 # prompt theme
 source "$HOME/.zsh/themes/prompt.sh"
 
+# bind key
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 # completions
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 zstyle ":completion:*" use-cache on
