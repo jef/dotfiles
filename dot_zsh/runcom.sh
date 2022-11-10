@@ -14,6 +14,9 @@ source "$HOME/.zsh/themes/prompt.sh"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# setopt
+setopt auto_cd
+
 # completions
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 zstyle ":completion:*" use-cache on
