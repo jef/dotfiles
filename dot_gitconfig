@@ -2,22 +2,27 @@
     name = Jef LeCompte
     email = jeffreylec@gmail.com
     signingkey = 7F5BA322B5DC170C
+
 [core]
     editor = nvim
     excludesfile = ~/.gitignore_global
+
 [commit]
     gpgsign = true
+
 [pull]
     rebase = false
     twohead = ort
+
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-[includeIf "gitdir:~/development/**"]
-    path = ~/developmentt/.gitconfig
+
+# Change with your git work directory
 [includeIf "gitdir:~/greenlight/**"]
     path = ~/greenlight/.gitconfig
+
 [init]
     defaultBranch = main

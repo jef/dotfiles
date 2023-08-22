@@ -11,6 +11,8 @@ alias dk="docker"
 alias dkc="docker-compose"
 
 # kitty
+alias icat="kitty +kitten icat"
+alias kssh="kitty +kitten ssh"
 alias themes="kitty +kitten themes"
 
 # kubernetes
@@ -77,15 +79,8 @@ alias gwDt="git difftool --no-ext-diff --word-diff"
 alias gws="git status --ignore-submodules=none --short"
 alias gwS="git status --ignore-submodules=none"
 
-# kitty
-alias icat="kitty +kitten icat"
-alias kssh="kitty +kitten ssh"
-
 # system
 alias rm="rm -i"
-
-# todo
-alias t="todo.sh"
 
 # vscode
 alias sudocode='sudo code --user-data-dir=${HOME}/.vscode-root'

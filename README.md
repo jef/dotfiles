@@ -17,6 +17,8 @@ Have fun! :wave:
 
 ### SSH
 
+Setting up proper permissions for SSH keys.
+
 ```shell
 chmod 700 ~/.ssh/
 chmod 644 ~/.ssh/config ~/.ssh/known_hosts $public_key
@@ -25,19 +27,22 @@ chmod 600 $private_key
 
 ### GPG
 
+This only really works if you don't mind losing any other keys (than your own).
+
 ```shell
-# List keys
-gpg --list-secret-keys
-export key_name=NAME
-# Backup existing key
-gpg --export-secret-keys --armor "$key_name" > /path/to/secret-key-backup.asc
-# Import keys
-gpg —-import /path/to/secret-key-backup.asc
-# Update trusts
-gpg --edit-key "$key_name"
-gpg> trust
-gpg> save
+# Export public and secret key and ownertrust
+
+gpg -a --export your.email@domain.tld > somename-public-gpg.key
+gpg -a --export-secret-keys your.email@domain.tld > somename-secret-gpg.key
+gpg --export-ownertrust > somename-ownertrust-gpg.txt
+
+# Import secret key (which contains the public key) and ownertrust
+
+gpg --import somename-secret-gpg.key
+gpg --import-ownertrust somename-ownertrust-gpg.txt
 ```
+
+> Used from this [gist](https://gist.github.com/chrisroos/1205934).
 
 ## AUR
 
