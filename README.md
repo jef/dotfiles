@@ -1,19 +1,26 @@
 # dotfiles
 
+This is my no fuss terminal setup. No plugin manager; all self-managed through git.
+
 ## Getting started
 
 - Install [Homebrew](http://brew.sh/) if macOS
 - Install [yay](https://github.com/Jguer/yay) if Arch Linux
-- Install [zsh](http://zsh.sourceforge.net/) via package manager
-- Install [zgenom](https://github.com/jandamm/zgenom#installation)
-- Install [chezmoi](https://www.chezmoi.io/docs/install/#one-line-package-install) via package manager
-- Run `chezmoi init --apply jef`
+- Install [zsh](https://www.zsh.org/) via package manager
+- Run `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply jef`
+    - You can continue to get updates with the same command
 
-You can then continue to get updates via `chezmoi update`
+Have fun! :rocket:
 
-Have fun! :wave:
+### Recommended tools
 
-## Configuration
+- Install [eza](https://github.com/eza-community/eza) for a colorful `ls`
+- Install [bat](https://github.com/sharkdp/bat) for better `cat`
+- Install [nvim](https://github.com/neovim/neovim) for better `vim`
+
+With these tools installed, you'll get preconfigured aliasing.
+
+## Notes
 
 ### SSH
 

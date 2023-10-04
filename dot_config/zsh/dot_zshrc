@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Enables Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Homebrew
+if [[ -d /opt/homebrew/bin ]]; then
+    export PATH="$PATH":/opt/homebrew/bin
+fi
+
+# public
+for file in "$ZDOTDIR"/conf.d/**/*; do
+    if [[ $file == *.sh ]]; then
+        source "$file"
+    fi
+done
+
+# private
+if [[ ! -d "$HOME"/.local/share/zsh/conf.d ]]; then
+    mkdir -p "$HOME"/.local/share/zsh/conf.d
+    touch "$HOME"/.local/share/zsh/conf.d/noop.sh
+fi
+
+for file in "$HOME"/.local/share/zsh/conf.d/**/*; do
+    if [[ $file == *.sh ]]; then
+        source "$file"
+    fi
+done
+
+# Homebrew completions
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
