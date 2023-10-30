@@ -2,7 +2,7 @@
 
 plugins=(
     romkatv/powerlevel10k
-    marlonrichert/zsh-autocomplete
+    Aloxaf/fzf-tab
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-history-substring-search
     zsh-users/zsh-syntax-highlighting
@@ -14,11 +14,21 @@ mkdir -p "$plugins_folder"
 for plugin in "${plugins[@]}"; do
     plugin_name="${plugin##*/}"
 
+    if [[ $plugin == "Aloxaf/fzf-tab" ]]; then
+        if ! type fzf &>/dev/null; then
+            continue
+        fi
+    fi
+
     if [[ ! -d "${plugins_folder}/${plugin_name}" ]]; then
         git clone "https://github.com/${plugin}.git" "${plugins_folder}/${plugin_name}"
     fi
 
     if [[ -f "${plugins_folder}/${plugin_name}/${plugin_name}.plugin.zsh" ]]; then
+        if [[ $plugin == "Aloxaf/fzf-tab" ]]; then
+            autoload -Uz compinit && compinit
+        fi
+
         source "${plugins_folder}/${plugin_name}/${plugin_name}.plugin.zsh"
     fi
 
