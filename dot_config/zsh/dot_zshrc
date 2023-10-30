@@ -10,6 +10,11 @@ if [[ -d /opt/homebrew/bin ]]; then
     export PATH="$PATH":/opt/homebrew/bin
 fi
 
+# Homebrew completions
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 # public
 for file in "$ZDOTDIR"/conf.d/**/*; do
     if [[ $file == *.sh ]]; then
@@ -28,11 +33,3 @@ for file in "$HOME"/.local/share/zsh/conf.d/**/*; do
         source "$file"
     fi
 done
-
-# Homebrew completions
-if type brew &>/dev/null; then
-    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-fi
-
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select

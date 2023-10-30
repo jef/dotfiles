@@ -2,6 +2,7 @@
 
 plugins=(
     romkatv/powerlevel10k
+    marlonrichert/zsh-autocomplete
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-history-substring-search
     zsh-users/zsh-syntax-highlighting
