@@ -8,6 +8,9 @@ else
     export VISUAL=vim
 fi
 
+export HISTFILE="${HOME}/.local/share/zsh/.zsh_history"
+
 export PATH="${PATH}:${HOME}/.local/bin"
 
 export WORDCHARS=""
+
