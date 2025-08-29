@@ -1,7 +1,6 @@
 #!/bin/bash
 
 plugins=(
-    romkatv/powerlevel10k
     Aloxaf/fzf-tab
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-history-substring-search
@@ -32,9 +31,8 @@ for plugin in "${plugins[@]}"; do
         source "${plugins_folder}/${plugin_name}/${plugin_name}.plugin.zsh"
     fi
 
-    if [[ "$plugin" == "romkatv/powerlevel10k" ]]; then
-        source "${plugins_folder}/${plugin_name}/${plugin_name}.zsh-theme"
-        source "$HOME"/.config/zsh/.p10k.sh
+    if type oh-my-posh &>/dev/null; then
+        eval "$(oh-my-posh init zsh --config peru)"
     fi
 done
 
