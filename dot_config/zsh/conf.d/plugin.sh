@@ -32,7 +32,7 @@ for plugin in "${plugins[@]}"; do
     fi
 
     if type oh-my-posh &>/dev/null; then
-        eval "$(oh-my-posh init zsh --config peru)"
+        eval "$(oh-my-posh init zsh --config "$HOME"/.config/oh-my-posh/config.json)"
     fi
 done
 

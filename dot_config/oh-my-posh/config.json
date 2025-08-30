@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ .Folder }}{{ if .Root }} :: root{{ end }} :: {{ .Shell }}",
+  "final_space": true,
+  "version": 3,
+  "tooltips_action": "prepend",
+  "async": true,
+  "upgrade": {
+    "notice": true,
+    "interval": "168h",
+    "auto": false,
+    "source": "cdn"
+  },
+  "palette": {
+    "red": "#EF5350",
+    "pink": "#EC407A",
+    "purple": "#AB47BC",
+    "deep-purple": "#7E57C2",
+    "indigo": "#5C6BC0",
+    "blue": "#42A5F5",
+    "light-blue": "#29B6F6",
+    "cyan": "#26C6DA",
+    "teal": "#26A69A",
+    "green": "#66BB6A",
+    "light-green": "#9CCC65",
+    "lime": "#D4E157",
+    "yellow": "#FFEE58",
+    "amber": "#FFCA28",
+    "orange": "#FFA726",
+    "deep-orange": "#FF7043",
+    "brown": "#8D6E63",
+    "gray": "#BDBDBD",
+    "blue-gray": "#78909C",
+    "white": "#FFFFFF",
+    "black": "#000000"
+  },
+  "tooltips": [
+    {
+      "type": "kubectl",
+      "style": "plain",
+      "tips": ["k", "kb", "kbc", "kubectl"],
+      "template": " [ \udb82\udc33 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ]"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "template": " [ {{ .CurrentDate | date .Format }} ]",
+          "properties": {
+            "time_format": "03:04:05 pm"
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "template": " [ {{ .FormattedMs }} ]",
+          "properties": {
+            "threshold": 500,
+            "style": "round"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "template": "{{ if .Root }}[ \udb84\udd5d ] {{ else if .SSHSession }}[ \uef09 ] {{ end }}"
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "template": "[ {{ .Path }} ] ",
+          "properties": {
+            "style": "powerlevel"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "[ {{ .HEAD }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ued75{{ end }} ] ",
+          "properties": {
+            "fetch_status": true
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "template": "[ \ued44 {{ .Full }} ]"
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "template": "[ \ue65e {{ .Full }} ]"
+        },
+        {
+          "type": "java",
+          "style": "plain",
+          "template": "[ \ue738 {{ .Full }} ]"
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if eq .Code 0 }}p:green{{ else }}p:red{{ end }}"
+          ],
+          "template": "\n$ "
+        }
+      ]
+    }
+  ]
+}
