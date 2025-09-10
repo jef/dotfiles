@@ -38,8 +38,9 @@
     {
       "type": "kubectl",
       "style": "plain",
-      "tips": ["k", "kb", "kbc", "kubectl"],
-      "template": " [ \udb82\udc33 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ]"
+      "tips": ["k", "kb", "kbc", "kubectl", "helm"],
+      "foreground": "p:cyan",
+      "template": " \udb82\udc33 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
     }
   ],
   "blocks": [
@@ -47,9 +48,28 @@
       "type": "rprompt",
       "segments": [
         {
+          "type": "node",
+          "style": "plain",
+          "foreground": "p:light-green",
+          "template": " \ued44 {{ .Full }}"
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:light-blue",
+          "template": " \ue65e {{ .Full }}"
+        },
+        {
+          "type": "java",
+          "style": "plain",
+          "foreground": "p:red",
+          "template": " \ue738 {{ .Full }}"
+        },
+        {
           "type": "time",
           "style": "plain",
-          "template": " [ {{ .CurrentDate | date .Format }} ]",
+          "foreground": "p:blue-gray",
+          "template": " {{ .CurrentDate | date .Format }}",
           "properties": {
             "time_format": "03:04:05 pm"
           }
@@ -57,7 +77,8 @@
         {
           "type": "executiontime",
           "style": "plain",
-          "template": " [ {{ .FormattedMs }} ]",
+          "foreground": "p:amber",
+          "template": " {{ .FormattedMs }}",
           "properties": {
             "threshold": 500,
             "style": "round"
@@ -73,38 +94,33 @@
         {
           "type": "session",
           "style": "plain",
-          "template": "{{ if .Root }}[ \udb84\udd5d ] {{ else if .SSHSession }}[ \uef09 ] {{ end }}"
+          "foreground_templates": [
+            "{{ if .Root }}p:red{{ end }}",
+            "{{ if .SSHSession }}p:blue{{ end }}"
+          ],
+          "template": "{{ if .Root }}\udb84\udd5d {{ else if .SSHSession }}\uef09 {{ end }}"
         },
         {
           "type": "path",
           "style": "plain",
-          "template": "[ {{ .Path }} ] ",
+          "foreground": "p:blue",
+          "template": "{{ .Path }} ",
           "properties": {
-            "style": "powerlevel"
+            "style": "folder"
           }
         },
         {
           "type": "git",
           "style": "plain",
-          "template": "[ {{ .HEAD }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ued75{{ end }} ] ",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:yellow{{ end }}",
+            "{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:yellow{{ end }}"
+          ],
+          "template": "{{ .HEAD }}",
           "properties": {
+            "branch_icon": "\uf418 ",
             "fetch_status": true
           }
-        },
-        {
-          "type": "node",
-          "style": "plain",
-          "template": "[ \ued44 {{ .Full }} ]"
-        },
-        {
-          "type": "go",
-          "style": "plain",
-          "template": "[ \ue65e {{ .Full }} ]"
-        },
-        {
-          "type": "java",
-          "style": "plain",
-          "template": "[ \ue738 {{ .Full }} ]"
         },
         {
           "type": "text",
