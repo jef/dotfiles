@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 test_font() {
     echo -e "regular"

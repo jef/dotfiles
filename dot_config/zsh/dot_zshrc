@@ -12,7 +12,7 @@ fi
 
 # public
 for file in "$ZDOTDIR"/conf.d/**/*; do
-    if [[ $file == *.sh ]]; then
+    if [[ $file == *.zsh ]]; then
         source "$file"
     fi
 done
@@ -20,11 +20,11 @@ done
 # private
 if [[ ! -d "$HOME"/.local/share/zsh/conf.d ]]; then
     mkdir -p "$HOME"/.local/share/zsh/conf.d
-    touch "$HOME"/.local/share/zsh/conf.d/noop.sh
+    touch "$HOME"/.local/share/zsh/conf.d/noop.zsh
 fi
 
 for file in "$HOME"/.local/share/zsh/conf.d/**/*; do
-    if [[ $file == *.sh ]]; then
+    if [[ $file == *.zsh ]]; then
         source "$file"
     fi
 done

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if type nvim &>/dev/null; then
     export EDITOR=nvim
@@ -13,4 +13,3 @@ export HISTFILE="${HOME}/.local/share/zsh/.zsh_history"
 export PATH="${PATH}:${HOME}/.local/bin"
 
 export WORDCHARS=""
-

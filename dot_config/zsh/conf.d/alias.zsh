@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # directory
 if type bat &>/dev/null; then

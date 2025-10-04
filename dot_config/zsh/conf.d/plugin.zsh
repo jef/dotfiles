@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 plugins=(
     Aloxaf/fzf-tab
@@ -31,12 +31,20 @@ for plugin in "${plugins[@]}"; do
         source "${plugins_folder}/${plugin_name}/${plugin_name}.plugin.zsh"
     fi
 
-    if type oh-my-posh &>/dev/null; then
-        eval "$(oh-my-posh init zsh --config "$HOME"/.config/oh-my-posh/config.json)"
-    fi
 done
 
-if [[ "$(date +%V)" -ne "$(/bin/cat "${plugins_folder}/last_refreshed")" ]]; then
+if type oh-my-posh &>/dev/null; then
+    eval "$(oh-my-posh init zsh --config "$HOME"/.config/oh-my-posh/config.json)"
+else
+    brew install jandedobbeleer/oh-my-posh/oh-my-posh
+fi
+
+last_refreshed_week="0"
+if [[ -f "${plugins_folder}/last_refreshed" ]]; then
+    last_refreshed_week="$(/bin/cat "${plugins_folder}/last_refreshed")"
+fi
+
+if [[ "$(date +%V)" -ne "$last_refreshed_week" ]]; then
     for plugin in "$plugins_folder"/*; do
         if [[ -d "$plugin" ]]; then
             git -C "$plugin" pull

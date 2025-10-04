@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 cloc_git() {
     local url

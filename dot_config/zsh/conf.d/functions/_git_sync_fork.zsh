@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 _git_sync_fork() {
     _git_fetch_pull_prune

@@ -1,0 +1,19 @@
+# https://alacritty.org/config-alacritty.html
+
+[general]
+live_config_reload = true
+
+[window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+
+[font]
+normal = { family = "Monaspace Neon", style = "Regular" }
+italic = { family = "Monaspace Radon", style = "Italic" }
+size = 13
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = "Beam"

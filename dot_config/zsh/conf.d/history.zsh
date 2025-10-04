@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 setopt appendhistory
 setopt share_history
