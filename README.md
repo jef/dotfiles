@@ -8,7 +8,7 @@ This is my no fuss terminal setup. No plugin manager; all self-managed through g
 - Install [yay](https://github.com/Jguer/yay) if Arch Linux
 - Install [zsh](https://www.zsh.org/) via package manager
 - Run `sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply jef`
-    - You can continue to get updates with the same command
+  - You can continue to get updates with the same command
 
 Have fun! :rocket:
 
@@ -17,8 +17,18 @@ Have fun! :rocket:
 - Install [eza](https://github.com/eza-community/eza) for a colorful `ls`
 - Install [bat](https://github.com/sharkdp/bat) for better `cat`
 - Install [nvim](https://github.com/neovim/neovim) for better `vim`
+- Install [fzf](https://github.com/junegunn/fzf) for fuzzy finding
+- Install [ripgrep](https://github.com/BurntSushi/ripgrep) for better `grep`
+- Install [fd](https://github.com/sharkdp/fd) for better `find`
+- Install [alacritty](https://github.com/alacritty/alacritty) for a modern terminal emulator
 
 With these tools installed, you'll get preconfigured aliasing.
+
+You can also install all recommended tools with the script `recommended.sh`.
+
+```shell
+curl -fsLS https://raw.githubusercontent.com/jef/dotfiles/main/recommended.sh | sh
+```
 
 ## Notes
 
@@ -57,11 +67,11 @@ gpg --import-ownertrust somename-ownertrust-gpg.txt
 
 1. Clone repo: `git clone ssh://aur@aur.archlinux.org/$repo.git`
 1. Update `PKGBUILD`
-    1. Edit the file `PKGBUILD` and make necessary changes, i.e. bumping the version number.
+   1. Edit the file `PKGBUILD` and make necessary changes, i.e. bumping the version number.
 1. Update checksums in the PKGBUILD file.
-    1. Use the tool `updpkgsums` for this. It can be installed by running `sudo pacman -Sy pacman-contrib`. It does the build, and writes the checksum into `PKGBUILD`.
+   1. Use the tool `updpkgsums` for this. It can be installed by running `sudo pacman -Sy pacman-contrib`. It does the build, and writes the checksum into `PKGBUILD`.
 1. Update `.SRCINFO` file.
-    1. It is generated from `PKGBUILD`, and required for the AUR. Run `makepkg --printsrcinfo > .SRCINFO`
+   1. It is generated from `PKGBUILD`, and required for the AUR. Run `makepkg --printsrcinfo > .SRCINFO`
 1. Verify before pushing.
-    1. Run `makepkg -C -f --noconfirm`. If it is successful, your package is OK.
+   1. Run `makepkg -C -f --noconfirm`. If it is successful, your package is OK.
 1. Push the changes.
