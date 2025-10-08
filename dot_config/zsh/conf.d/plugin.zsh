@@ -30,13 +30,10 @@ for plugin in "${plugins[@]}"; do
 
         source "${plugins_folder}/${plugin_name}/${plugin_name}.plugin.zsh"
     fi
-
 done
 
 if type oh-my-posh &>/dev/null; then
     eval "$(oh-my-posh init zsh --config "$HOME"/.config/oh-my-posh/config.json)"
-else
-    brew install jandedobbeleer/oh-my-posh/oh-my-posh
 fi
 
 last_refreshed_week="0"
