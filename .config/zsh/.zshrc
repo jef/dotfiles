@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# Homebrew
+if [[ -d /opt/homebrew/bin ]]; then
+    export PATH="$PATH":/opt/homebrew/bin
+fi
+
+# Homebrew completions
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+# public
+for file in "$ZDOTDIR"/conf.d/**/*; do
+    if [[ $file == *.zsh ]]; then
+        source "$file"
+    fi
+done
+
+# private
+if [[ ! -d "$HOME"/.local/share/zsh/conf.d ]]; then
+    mkdir -p "$HOME"/.local/share/zsh/conf.d
+    touch "$HOME"/.local/share/zsh/conf.d/noop.zsh
+fi
+
+for file in "$HOME"/.local/share/zsh/conf.d/**/*; do
+    if [[ $file == *.zsh ]]; then
+        source "$file"
+    fi
+done

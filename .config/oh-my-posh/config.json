@@ -1,0 +1,112 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "upgrade": {
+    "source": "cdn",
+    "interval": "168h",
+    "auto": false,
+    "notice": true
+  },
+  "console_title_template": "{{ .Folder }}{{ if .Root }} :: root{{ end }} :: {{ .Shell }}",
+  "tooltips_action": "prepend",
+  "blocks": [
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "template": " n {{ .Full }}",
+          "foreground": "lightGreen",
+          "type": "node",
+          "style": "plain"
+        },
+        {
+          "template": " g {{ .Full }}",
+          "foreground": "lightBlue",
+          "type": "go",
+          "style": "plain"
+        },
+        {
+          "template": " j {{ .Full }}",
+          "foreground": "red",
+          "type": "java",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "time_format": "03:04:05 pm"
+          },
+          "template": " {{ .CurrentDate | date .Format }}",
+          "foreground": "lightWhite",
+          "type": "time",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "style": "round",
+            "threshold": 500
+          },
+          "template": " {{ .FormattedMs }}",
+          "foreground": "lightYellow",
+          "type": "executiontime",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "{{ if .Root }}root {{ else if .SSHSession }}remote {{ end }}",
+          "type": "session",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if .Root }}red{{ end }}",
+            "{{ if .SSHSession }}red{{ end }}"
+          ]
+        },
+        {
+          "options": {
+            "style": "folder"
+          },
+          "template": "{{ .Path }} ",
+          "foreground": "blue",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "fetch_status": true,
+            "branch_icon": ""
+          },
+          "template": "{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }} *{{ end }}{{ if gt .Ahead 0 }} \u2191{{ end }}{{ if gt .Behind 0 }} \u2193{{ end }}{{ if gt .StashCount 0 }} ?{{ end }}",
+          "type": "git",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) (gt .Ahead 0) (gt .Behind 0) (gt .StashCount 0) }}yellow{{ end }}"
+          ]
+        },
+        {
+          "template": "\n#",
+          "type": "text",
+          "style": "plain",
+          "foreground_templates": [
+            "{{ if eq .Code 0 }}green{{ else }}red{{ end }}"
+          ]
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "tooltips": [
+    {
+      "template": " k {{ .Context }}{{ if .Namespace }} :: {{ .Namespace}}{{end}}",
+      "foreground": "cyan",
+      "type": "kubectl",
+      "style": "plain",
+      "tips": ["k", "kb", "kbc", "kubectl", "helm"]
+    }
+  ],
+  "version": 4,
+  "async": true,
+  "final_space": true
+}

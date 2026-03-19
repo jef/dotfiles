@@ -1,0 +1,7 @@
+.idea/
+stale_outputs_checked
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
