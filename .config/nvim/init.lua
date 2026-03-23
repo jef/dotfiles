@@ -16,7 +16,7 @@ vim.g.loaded_netrwPlugin = 1
 
 local opt = vim.opt
 
-opt.termguicolors   = false   -- use terminal ANSI colors
+opt.termguicolors   = true
 opt.laststatus      = 2
 opt.expandtab       = true
 opt.softtabstop     = 4
@@ -54,7 +54,7 @@ vim.opt.rtp:prepend(lazypath)
 -- =============================================================================
 require("lazy").setup({
 
-  -- File tree (no icons)
+  -- File tree
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -72,19 +72,37 @@ require("lazy").setup({
             },
           },
         },
-        filters = { dotfiles = false },
+        filters = { dotfiles = false, git_ignored = false },
       })
     end,
   },
 
-  -- Statusline (ASCII, 16-color)
+  -- Statusline
   {
     "nvim-lualine/lualine.nvim",
     lazy = false,
     config = function()
+      local c = {
+        bg   = "#1e1e2e",
+        fg   = "#cdd6f4",
+        gray = "#585b70",
+        blue = "#89b4fa",
+        green= "#a6e3a1",
+        cyan = "#89dceb",
+        red  = "#f38ba8",
+        peach= "#fab387",
+      }
+      local theme = {
+        normal   = { a = { bg = c.blue,  fg = c.bg, gui = "bold" }, b = { bg = c.gray, fg = c.fg }, c = { bg = c.bg, fg = c.fg } },
+        insert   = { a = { bg = c.green, fg = c.bg, gui = "bold" }, b = { bg = c.gray, fg = c.fg }, c = { bg = c.bg, fg = c.fg } },
+        visual   = { a = { bg = c.cyan,  fg = c.bg, gui = "bold" }, b = { bg = c.gray, fg = c.fg }, c = { bg = c.bg, fg = c.fg } },
+        replace  = { a = { bg = c.red,   fg = c.bg, gui = "bold" }, b = { bg = c.gray, fg = c.fg }, c = { bg = c.bg, fg = c.fg } },
+        command  = { a = { bg = c.peach, fg = c.bg, gui = "bold" }, b = { bg = c.gray, fg = c.fg }, c = { bg = c.bg, fg = c.fg } },
+        inactive = { a = { bg = c.bg,    fg = c.gray             }, b = { bg = c.bg,   fg = c.gray }, c = { bg = c.bg, fg = c.gray } },
+      }
       require("lualine").setup({
         options = {
-          theme                = "16color",
+          theme                = theme,
           section_separators   = { left = "|", right = "|" },
           component_separators = { left = "|", right = "|" },
           icons_enabled        = false,

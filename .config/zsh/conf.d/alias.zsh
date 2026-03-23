@@ -87,5 +87,8 @@ alias gwDt='git difftool --no-ext-diff --word-diff'
 alias gws='git status --ignore-submodules=none --short'
 alias gwS='git status --ignore-submodules=none'
 
+# dotfiles
+alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # system
 alias rm='rm -i'

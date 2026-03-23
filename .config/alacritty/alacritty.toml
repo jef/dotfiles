@@ -6,14 +6,10 @@ live_config_reload = true
 [window]
 padding = { x = 3, y = 3 }
 dynamic_padding = true
+option_as_alt = "Both"
 
 [font]
-size = 13
+size = 14
 
 [selection]
 save_to_clipboard = true
-
-[keyboard]
-bindings = [
-  { key = "Back", mods = "Alt", chars = "\u001b\u007f" },
-]

@@ -1,0 +1,12 @@
+font-size = 14
+
+window-padding-x = 3
+window-padding-y = 3
+window-padding-balance = true
+
+macos-option-as-alt = true
+
+copy-on-select = clipboard
+
+quit-after-last-window-closed = true
+confirm-close-surface = false
