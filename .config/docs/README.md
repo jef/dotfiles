@@ -34,7 +34,7 @@ Have fun! :rocket:
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep) for better `grep`
 - Install [fd](https://github.com/sharkdp/fd) for better `find`
 - Install [tmux](https://github.com/tmux/tmux) for terminal multiplexing and session persistence
-- Install [alacritty](https://github.com/alacritty/alacritty) for a modern terminal emulator
+- Install [ghostty](https://github.com/ghostty-org/ghostty) for a modern terminal emulator
 
 With these tools installed, you'll get preconfigured aliasing.
 
