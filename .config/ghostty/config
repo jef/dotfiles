@@ -13,3 +13,5 @@ quit-after-last-window-closed = true
 confirm-close-surface = false
 
 title = "$$$ BUST $$$ DOWN $$$"
+
+keybind = super+enter=unbind
