@@ -48,18 +48,18 @@ command_exists() {
 # Install tools on macOS using Homebrew
 install_macos() {
     log_info "Detected macOS"
-    
+
     # Check if Homebrew is installed
     if ! command_exists brew; then
         log_error "Homebrew is not installed. Please install it first:"
         log_error "Run: /bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
         exit 1
     fi
-    
+
     log_info "Installing recommended tools via Homebrew..."
-    
+
     # List of tools to install
-    tools="eza bat neovim fzf ripgrep fd tmux ghostty"
+    tools="eza bat helix fzf ripgrep fd zellij git-delta alacritty"
 
     for tool in $tools; do
         if brew list "$tool" >/dev/null 2>&1; then
@@ -78,7 +78,7 @@ install_macos() {
 # Install tools on Arch Linux using yay or pacman
 install_arch() {
     log_info "Detected Arch Linux"
-    
+
     # Prefer yay over pacman for AUR support
     if command_exists yay; then
         INSTALLER="yay"
@@ -92,11 +92,11 @@ install_arch() {
         log_error "Neither yay nor pacman found. Please install one of them first."
         exit 1
     fi
-    
+
     log_info "Installing recommended tools via $INSTALLER..."
-    
+
     # List of tools to install (Arch package names)
-    tools="eza bat neovim fzf ripgrep fd tmux ghostty"
+    tools="eza bat helix fzf ripgrep fd zellij git-delta alacritty"
 
     for tool in $tools; do
         if $CHECK_CMD "$tool" >/dev/null 2>&1; then
@@ -115,9 +115,9 @@ install_arch() {
 # Main installation function
 main() {
     log_info "Starting installation of recommended tools..."
-    
+
     OS=$(detect_os)
-    
+
     case "$OS" in
         "macos")
             install_macos
@@ -131,7 +131,7 @@ main() {
             exit 1
             ;;
     esac
-    
+
     log_success "Installation completed!"
     log_info "You may need to restart your terminal or source your shell configuration to use the new tools."
 }

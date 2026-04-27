@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-if type nvim &>/dev/null; then
-    export EDITOR=nvim
-    export VISUAL=nvim
+if type hx &>/dev/null; then
+    export EDITOR=hx
+    export VISUAL=hx
 else
     export EDITOR=vim
     export VISUAL=vim

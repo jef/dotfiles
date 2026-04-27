@@ -25,8 +25,8 @@ alias kb='kubectl'
 alias kbc='kubectl config'
 
 # editors
-if type nvim &>/dev/null; then
-    alias v='nvim'
+if type hx &>/dev/null; then
+    alias v='hx'
 fi
 
 # git

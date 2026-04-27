@@ -4,8 +4,15 @@
     signingkey = 7F5BA322B5DC170C
 
 [core]
-    editor = nvim
+    editor = hx
     excludesfile = ~/.gitignore_global
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
 
 [commit]
     gpgsign = true
@@ -29,6 +36,7 @@
 
 [diff]
     algorithm = histogram
+    colorMoved = default
 
 [merge]
     conflictstyle = zdiff3
