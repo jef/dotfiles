@@ -59,7 +59,7 @@ install_macos() {
     log_info "Installing recommended tools via Homebrew..."
 
     # List of tools to install
-    tools="eza bat helix fzf ripgrep fd zellij git-delta alacritty"
+    tools="eza bat helix fzf ripgrep fd zellij alacritty"
 
     for tool in $tools; do
         if brew list "$tool" >/dev/null 2>&1; then
@@ -96,7 +96,7 @@ install_arch() {
     log_info "Installing recommended tools via $INSTALLER..."
 
     # List of tools to install (Arch package names)
-    tools="eza bat helix fzf ripgrep fd zellij git-delta alacritty"
+    tools="eza bat helix fzf ripgrep fd zellij alacritty"
 
     for tool in $tools; do
         if $CHECK_CMD "$tool" >/dev/null 2>&1; then
